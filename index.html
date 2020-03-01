@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 
-<head runat="server">
+<head>
 
 
 
@@ -107,7 +107,6 @@
             var isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
             if (isMobile) {
                 document.getElementById("mobile-block").style.visibility = "visible";
-
             }
 
 
@@ -171,7 +170,13 @@
         </div>
     </div>
 
-    <div id="mobile-block"></div>
+    <div id="mobile-block">
+        <div id="oops">
+            <div id="oops-title">Oopsie!</div>
+            <span id="oops-description">This site is still not optimized for mobile users. Please visit this site with your desktop. Sorry for the inconvenience caused!</span>
+
+        </div>
+    </div>
 
 
 
