@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 
-<head>
+<head runat="server">
 
 
 
@@ -106,7 +106,7 @@
 
             var isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
 
-            if (isMobile) {
+            if (isMobile || detectMobileDM) {
                 document.getElementById("mobile-block").style.visibility = "visible";
             }
 
@@ -118,9 +118,13 @@
                 }
             };
 
+
+
         });
 
-
+        function detectMobileDM() {
+            return ((window.innerWidth <= 800) && (window.innerHeight <= 600));
+        }
 
 
         function scrollAnimation() {
