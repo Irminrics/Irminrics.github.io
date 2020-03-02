@@ -1,4 +1,5 @@
 
+
 @font-face {
     font-family: 'miso-bold';
     src: url('../fonts/miso-bold/miso-bold-webfont.eot'); /* IE9 Compat Modes */
@@ -9,11 +10,8 @@
     url('../fonts/miso-bold/miso-bold-webfont.svg#svgFontName') format('svg'); /* Legacy iOS */
 }
 
-@media only screen (max-device-width : 768px) {
-    #mobile-block {
-        visibility: visible;
-    }
-}
+
+
 
 html, body {
     width: 100%;
@@ -113,7 +111,7 @@ html, body {
 }
 
 #oops-title{
-    padding: 100px;
+    padding: 5%;
     font-family:miso-bold;
     font-size: 200px;
 }
@@ -256,3 +254,19 @@ html, body {
 }
 
 
+
+@media only screen and (max-width: 768px) {
+    #mobile-block {
+        visibility: visible;
+    }
+}
+
+@media only screen and (max-width: 660px) {
+    #oops-title {
+        font-size: 140px;
+    }
+
+    #oops-description {
+        font-size: 20px;
+    }
+}
