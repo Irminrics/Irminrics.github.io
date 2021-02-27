@@ -82,7 +82,7 @@ $(document).ready(function () {
     document.querySelectorAll(".experience-box").forEach(el => el.style.opacity = "0");
 
     if ($(window).scrollTop() === 0) {
-        console.log("Hidden");
+
         document.getElementById("btt-button").style.visibility = "hidden";
     }
 
@@ -122,6 +122,29 @@ $(document).ready(function () {
     var textWrapper = document.querySelector('.ml1 .letters');
     textWrapper.innerHTML = textWrapper.textContent.replace(/\S/g, "<span class='letter'>$&</span>");
 
+    // Wrap every letter in a span
+    var textWrapper = document.querySelector('.ml2 .letters');
+    textWrapper.innerHTML = textWrapper.textContent.replace(/\S/g, "<span class='letter'>$&</span>");
+
+    var contactHeader = anime.timeline({ loop: false, autoplay: false })
+        .add({
+            targets: '.ml2 .letter',
+            scale: [0.3, 1],
+            opacity: [0, 1],
+            translateZ: 0,
+            easing: "easeOutExpo",
+            duration: 600,
+            delay: (el, i) => 70 * (i + 1),
+        }).add({
+            targets: '.ml2 .line',
+            scaleX: [0, 1],
+            opacity: [0.5, 1],
+            easing: "easeOutExpo",
+            duration: 700,
+            offset: '-=875',
+            delay: (el, i, l) => 80 * (l - i)
+        });
+
     var experienceHeader = anime.timeline({ loop: false, autoplay: false })
         .add({
             targets: '.ml1 .letter',
@@ -147,7 +170,7 @@ $(document).ready(function () {
         opacity: 1,
         duration: 5000,
         autoplay: false,
-        delay: anime.stagger(100) // increase delay by 100ms for each elements.
+        delay: anime.stagger(450) // increase delay by 450ms for each elements.
     });
 
 
@@ -169,6 +192,16 @@ $(document).ready(function () {
         },
         offset: 500
     });
+
+    var contactHeaderWP = new Waypoint({
+        element: document.getElementById('third-div'),
+        handler: function () {
+            contactHeader.play();
+            contactHeaderWP.destroy();
+        },
+        offset: 500
+    });
+
 
 
 
@@ -193,9 +226,6 @@ function scrollToTop() {
     window.scrollTo(0, y1);
     if (y1 > 0) {
         t1 = setTimeout("scrollToTop()", 100);
-    }
-    else {
-        clearTimeout(t1);
     }
 }
 
