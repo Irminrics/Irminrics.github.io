@@ -151,6 +151,7 @@ html, body {
 
 
 #intro-background {
+    display: table;
     width: 100%;
     height: 800px;
     background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url("../images/city-cars.gif");
@@ -159,17 +160,17 @@ html, body {
 }
 
 #intro-div {
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
     width: 50%;
     height: 30%;
     margin: auto;
     text-align: center;
     color: white;
     font-size: 20px;
+}
+
+#main-intro {
+    vertical-align: middle;
+    display: table-cell;
 }
 
 #cards-div {
@@ -512,10 +513,14 @@ html, body {
     border: 1px solid white;
 }
 
+/*here*/
+@media only screen and (max-width: 576px) {
+    #info-div {
+        height: 2600px;
+    }
 
-@media only screen and (max-width: 768px) {
-    #mobile-block {
-        visibility: visible;
+    #experience-diagram {
+        height: 2400px;
     }
 }
 
@@ -526,6 +531,30 @@ html, body {
 
     #oops-description {
         font-size: 20px;
+    }
+}
+
+@media (min-width:576px) and (max-width: 767px) {
+    #info-div {
+        height: 1300px;
+    }
+
+    #experience-diagram {
+        height: 1000px;
+    }
+
+    #mobile-block {
+        visibility: hidden;
+    }
+}
+
+@media (min-width:768px) and (max-width: 900px) {
+    #info-div {
+        height: 930px;
+    }
+
+    #experience-diagram {
+        height: 630px;
     }
 }
 
