@@ -100,7 +100,7 @@ $(document).ready(function () {
         }
     };
 
-    const demoText = new TypeIt('Hello! This is Jun Kang.', '.typeText .content', 100);
+    const demoText = new TypeIt('Hi! This is Jun Kang.', '.typeText .content', 100);
     demoText.run();
 
     var cursor = true;
