@@ -46,7 +46,7 @@ html, body {
 
 /* The header for the nav bar */
 #title-irminrics {
-    font-family: miso-bold;
+    font-family: miso-bold, sans-serif;
     font-size: 30px;
     color: white;
 }
@@ -111,7 +111,7 @@ html, body {
 
 #oops-title {
     padding: 5%;
-    font-family: miso-bold;
+    font-family: miso-bold, sans-serif;
     font-size: 200px;
 }
 
@@ -200,7 +200,7 @@ html, body {
 }
 
 .miso-bold {
-    font-family: miso-bold;
+    font-family: miso-bold, sans-serif;
 }
 
 #about-me-title {
@@ -314,7 +314,7 @@ html, body {
     .typeText .content {
         display: inline;
         color: white;
-        font-family: Miso;
+        font-family: Miso, sans-serif;
         margin-right: -30px;
     }
 
@@ -354,7 +354,7 @@ html, body {
 
 
 .ml1 {
-    font-family: Miso;
+    font-family: Miso, sans-serif;
     font-size: 3.5em;
     margin: 0 auto;
     text-align: center;
@@ -393,7 +393,7 @@ html, body {
 
 
 .ml2 {
-    font-family: Miso;
+    font-family: Miso, sans-serif;
     font-size: 3.5em;
     margin: 0 auto;
     text-align: center;
