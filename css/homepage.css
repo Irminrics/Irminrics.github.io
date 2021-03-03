@@ -90,37 +90,6 @@ html, body {
     background-color: black;
 }
 
-#mobile-block {
-    position: fixed;
-    width: 100%;
-    height: 100%;
-    z-index: 9999999;
-    overflow: visible;
-    background-color: black;
-    visibility: hidden;
-}
-
-#oops {
-    margin: 0 auto;
-    width: 70%;
-    height: 100%;
-    position: relative;
-    color: white;
-    text-align: center;
-}
-
-#oops-title {
-    padding: 5%;
-    font-family: miso-bold, sans-serif;
-    font-size: 200px;
-}
-
-#oops-description {
-    font-size: 30px;
-}
-
-
-
 .circle {
     display: inline-block;
     width: 32px;
