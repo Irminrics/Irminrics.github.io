@@ -20,61 +20,6 @@
     }
 }
 
-var circle1 = anime({
-    targets: ['.circle-1'],
-    translateY: -18,
-    translateX: 44,
-    direction: 'alternate',
-    loop: true,
-    elasticity: 400,
-    easing: 'easeInOutElastic',
-    duration: 2000,
-});
-
-var circle2 = anime({
-    targets: ['.circle-2'],
-    translateY: 24,
-    direction: 'alternate',
-    loop: true,
-    elasticity: 400,
-    easing: 'easeInOutElastic',
-    duration: 2000,
-});
-
-var circle3 = anime({
-    targets: ['.circle-3'],
-    translateY: -19,
-    direction: 'alternate',
-    loop: true,
-    elasticity: 400,
-    easing: 'easeInOutElastic',
-    duration: 2000,
-});
-
-var circle4 = anime({
-    targets: ['.circle-4'],
-    translateY: 24,
-    translateX: -44,
-    loop: true,
-    direction: 'alternate',
-    elasticity: 400,
-    easing: 'easeInOutElastic',
-    duration: 2000,
-});
-
-
-function removeLoader() {
-    $("#loader-wrapper").fadeOut(500, function () {
-        // fadeOut complete. Remove the loading div
-        $("#loader-wrapper").remove(); //makes page more lightweight 
-    });
-}
-
-
-$(window).ready(removeLoader);
-
-// Strongly recommended: Hide loader after 20 seconds, even if the page hasn't finished loading
-setTimeout(removeLoader, 20 * 1000);
 
 
 $(document).ready(function () {

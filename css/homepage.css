@@ -81,43 +81,6 @@ html, body {
 
 /*overflow: -moz-scrollbars-none; for firefox*/
 
-#loader-wrapper {
-    position: fixed;
-    width: 100%;
-    height: 100%;
-    z-index: 9999999;
-    overflow: visible;
-    background-color: black;
-}
-
-.circle {
-    display: inline-block;
-    width: 32px;
-    height: 32px;
-    border-radius: 50%;
-    margin: 0 4px;
-    z-index: -1;
-}
-
-.circle-1 {
-    border: 4px solid #fc1460;
-}
-
-.circle-2 {
-    border: 4px solid #5a87ff;
-}
-
-.circle-3 {
-    border: 4px solid #18fd91;
-}
-
-.circle-4 {
-    border: 4px solid #fbf38c;
-}
-
-
-
-
 
 #intro-background {
     display: table;
@@ -517,7 +480,6 @@ html, body {
     .typeText .content {
         margin-right: -14px;
     }
-  
 }
 
 
