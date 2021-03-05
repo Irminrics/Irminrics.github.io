@@ -83,6 +83,7 @@ html, body {
 
 .irminrics-dp {
     background-image: url(../images/irminrics-dp.png);
+    margin-left: 8px;
 }
 
 ::-webkit-scrollbar {
@@ -130,6 +131,9 @@ html, body {
     background-color: #212121;
     padding-top: 100px;
 }
+
+
+
 
 #second-background {
     width: 100%;
@@ -422,7 +426,7 @@ html, body {
 #contact-form {
     margin: 0 auto;
     margin-top: 70px;
-    width: 35%;
+    width: 55%;
     height: 600px;
 }
 
@@ -516,6 +520,10 @@ html, body {
     }
 
     #intro-background {
+        background: black;
+    }
+
+    #second-background {
         background: black;
     }
 
