@@ -62,6 +62,10 @@ $(document).ready(function () {
     var textWrapper = document.querySelector('.ml3 .letters');
     textWrapper.innerHTML = textWrapper.textContent.replace(/\S/g, "<span class='letter'>$&</span>");
 
+    // Wrap every letter in a span
+    var textWrapper = document.querySelector('.ml4 .letters');
+    textWrapper.innerHTML = textWrapper.textContent.replace(/\S/g, "<span class='letter'>$&</span>");
+
     var contactHeader = anime.timeline({ loop: false, autoplay: false })
         .add({
             targets: '.ml2 .letter',
@@ -119,6 +123,25 @@ $(document).ready(function () {
             delay: (el, i, l) => 80 * (l - i)
         });
 
+    var awardsHeader = anime.timeline({ loop: false, autoplay: false })
+        .add({
+            targets: '.ml4 .letter',
+            scale: [0.3, 1],
+            opacity: [0, 1],
+            translateZ: 0,
+            easing: "easeOutExpo",
+            duration: 600,
+            delay: (el, i) => 70 * (i + 1),
+        }).add({
+            targets: '.ml4 .line',
+            scaleX: [0, 1],
+            opacity: [0.5, 1],
+            easing: "easeOutExpo",
+            duration: 700,
+            offset: '-=875',
+            delay: (el, i, l) => 80 * (l - i)
+        });
+
     var experienceContent = anime({
         targets: '.experience-box',
         easing: "easeOutExpo",
@@ -166,11 +189,25 @@ $(document).ready(function () {
         offset: 500
     });
 
+    var awardsHeaderWP = new Waypoint({
+        element: document.getElementById('awards-div'),
+        handler: function () {
+            awardsHeader.play();
+            awardsHeaderWP.destroy();
+        },
+        offset: 500
+    });
+
+
+
+    
+
+    
+
 
 
 
 });
-
 
 
 
