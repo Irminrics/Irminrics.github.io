@@ -294,13 +294,6 @@ html, body {
         display: inline;
         color: white;
         font-family: miso-bold, sans-serif;
-        margin-right: -30px;
-    }
-
-    .typeText .cursor {
-        font-weight: bolder;
-        animation: blink .5s infinite linear;
-        display: none;
     }
 
 .intro-description {
@@ -310,10 +303,6 @@ html, body {
     font-family: miso, sans-serif;
 }
 
-#cursor {
-    font-size: 1em;
-    color: white;
-}
 
 @keyframes blink {
     0% {
@@ -477,7 +466,6 @@ html, body {
         height: 3px;
         width: 100%;
         background-color: #212121;
-        transform-origin: 0 0;
     }
 
     .ml4 .line1 {
@@ -599,20 +587,13 @@ html, body {
 
 
     .typeText {
-        font-size: 2.60em;
-    }
-
-    #cursor {
-        font-size: 0.85em;
+        font-size: 2.15em;
     }
 
     .intro-description {
-        font-size: 1.0em;
+        font-size: 0.95em;
     }
 
-    .typeText .content {
-        margin-right: -14px;
-    }
 }
 
 
@@ -628,20 +609,13 @@ html, body {
     }
 
     .typeText {
-        font-size: 3.0em;
-    }
-
-    #cursor {
-        font-size: 0.85em;
+        font-size: 2.55em;
     }
 
     .intro-description {
-        font-size: 1.15em;
+        font-size: 1.05em;
     }
 
-    .typeText .content {
-        margin-right: -20px;
-    }
 }
 
 @media only screen and (max-width: 660px) {
@@ -668,20 +642,14 @@ html, body {
     }
 
     .typeText {
-        font-size: 3.5em;
-    }
-
-    #cursor {
-        font-size: 0.85em;
+        font-size: 3.2em;
     }
 
     .intro-description {
         font-size: 1.20em;
     }
 
-    .typeText .content {
-        margin-right: -24px;
-    }
+
 }
 
 
@@ -707,8 +675,8 @@ html, body {
     }
 
     #about-me-picture {
-        width: 325px;
-        height: 307px;
+        width: 373px;
+        height: 353px;
     }
 }
 

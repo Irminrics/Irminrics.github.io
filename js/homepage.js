@@ -1,54 +1,33 @@
-﻿class TypeIt {
-    constructor(text, container, speed) {
-        this.text = text;
-        this.container = container;
-        this.speed = speed;
-        this.current = 0;
-    }
-
-    run() {
-        const cont = document.querySelector(this.container);
-        cont.append(this.text[this.current]);
-        this.current++;
-
-        if (this.current < this.text.length) {
-            window.setTimeout(() => {
-                this.run();
-            }, this.speed);
-
-        }
-    }
-}
-
-
-
+﻿
 $(document).ready(function () {
 
     document.querySelectorAll(".experience-box").forEach(el => el.style.opacity = "0");
+    document.querySelectorAll("#about-me-picture-box").forEach(el => el.style.opacity = "0");
+    document.querySelectorAll("#about-me-description").forEach(el => el.style.opacity = "0");
 
     if ($(window).scrollTop() === 0) {
 
         document.getElementById("btt-button").style.visibility = "hidden";
     }
 
+    new TypeIt(".typeText .content", {
+        speed: 100
+    })
+        .type("Hi! This is Jun Kang.")
+        .pause(1200)
+        .delete(9, { speed: 200 })
+        .type("my resume.")
+        .pause(1200)
+        .delete(7, { speed: 200 })
+        .type("portfolio.")
+        .pause(1200)
+        .delete(13, { speed: 200 })
+        .type("Jun Kang.")
+        .go();
 
-    const demoText = new TypeIt('Hi! This is Jun Kang.', '.typeText .content', 100);
-    demoText.run();
 
-    var cursor = true;
-    var speed = 550;
 
-    setTimeout(function () {
-        setInterval(() => {
-            if (cursor) {
-                document.getElementById('cursor').style.opacity = 0;
-                cursor = false;
-            } else {
-                document.getElementById('cursor').style.opacity = 1;
-                cursor = true;
-            }
-        }, speed);
-    }, 2500);
+
 
     // Wrap every letter in a span
     var textWrapper = document.querySelector('.ml1 .letters');
@@ -151,6 +130,22 @@ $(document).ready(function () {
         delay: anime.stagger(450) // increase delay by 450ms for each elements.
     });
 
+    var aboutMePicture = anime({
+        targets: '#about-me-picture-box',
+        easing: "easeOutExpo",
+        opacity: 1,
+        duration: 5000,
+        autoplay: false,
+    });
+
+    var aboutMeDescription = anime({
+        targets: '#about-me-description',
+        easing: "easeOutExpo",
+        opacity: 1,
+        duration: 5000,
+        autoplay: false,
+    });
+
 
     var experienceHeaderWP = new Waypoint({
         element: document.getElementById('info-div'),
@@ -198,11 +193,24 @@ $(document).ready(function () {
         offset: 500
     });
 
+    var aboutMePictureWP = new Waypoint({
+        element: document.getElementById('about-me-picture-box'),
+        handler: function () {
+            aboutMePicture.play();
+            aboutMePictureWP.destroy();
+        },
+        offset: 500
+    });
 
+    var aboutMeDescriptionWP = new Waypoint({
+        element: document.getElementById('about-me-description'),
+        handler: function () {
+            aboutMeDescription.play();
+            aboutMeDescriptionWP.destroy();
+        },
+        offset: 500
+    });
 
-    
-
-    
 
 
 
