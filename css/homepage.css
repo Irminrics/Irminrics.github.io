@@ -349,7 +349,6 @@ html, body {
         height: 3px;
         width: 100%;
         background-color: #212121;
-        transform-origin: 0 0;
     }
 
     .ml1 .line1 {
@@ -389,7 +388,6 @@ html, body {
         height: 3px;
         width: 100%;
         background-color: white;
-        transform-origin: 0 0;
     }
 
     .ml2 .line1 {
@@ -428,7 +426,6 @@ html, body {
         height: 3px;
         width: 100%;
         background-color: white;
-        transform-origin: 0 0;
     }
 
     .ml3 .line1 {
@@ -593,7 +590,6 @@ html, body {
     .intro-description {
         font-size: 0.95em;
     }
-
 }
 
 
@@ -615,7 +611,6 @@ html, body {
     .intro-description {
         font-size: 1.05em;
     }
-
 }
 
 @media only screen and (max-width: 660px) {
@@ -648,8 +643,6 @@ html, body {
     .intro-description {
         font-size: 1.20em;
     }
-
-
 }
 
 

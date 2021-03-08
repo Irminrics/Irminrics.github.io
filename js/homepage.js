@@ -230,13 +230,16 @@ function scrollAnimation() {
 
 
 function scrollToTop() {
-    var y1 = window.scrollY;
-    y1 = y1 - 10000;
-    window.scrollTo(0, y1);
-    if (y1 > 0) {
-        t1 = setTimeout("scrollToTop()", 100);
-    }
+    $('html,body').animate({ scrollTop: 0 }, 200);
+    return false; 
 }
+
+function scrollToBottom() {
+    $('html,body').animate({ scrollTop: $('#copyright').offset().top }, 200);
+    return false;
+}
+    
+
 
 
 
