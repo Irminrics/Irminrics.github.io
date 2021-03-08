@@ -96,7 +96,7 @@ html, body {
 #intro-background {
     display: table;
     width: 100%;
-    height: 800px;
+    height: 1000px;
     background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url("../images/city-cars.gif");
     background-size: cover;
     background-attachment: fixed;
@@ -127,9 +127,9 @@ html, body {
 }
 
 #about-me-div {
-    height: 900px;
+    height: 1000px;
     background-color: #212121;
-    padding-top: 100px;
+    padding-top: 150px;
 }
 
 .about-me-box {
@@ -152,13 +152,13 @@ html, body {
 #about-me-description {
     margin: 0 auto;
     color: white;
-    padding-top: 100px;
+    padding-top: 125px;
     width: 70%;
 }
 
 #awards-div {
-    padding-top: 100px;
-    height: 800px;
+    padding-top: 150px;
+    height: 1000px;
     background-color: #DFDFDF;
 }
 
@@ -196,9 +196,9 @@ html, body {
 
 #info-div {
     width: 100%;
-    height: 830px;
+    height: 1050px;
     background-color: #DFDFDF;
-    padding-top: 100px;
+    padding-top: 150px;
 }
 
 .row:after {
@@ -215,8 +215,8 @@ html, body {
 #experience-diagram {
     margin: 0 auto;
     width: 100%;
-    height: 500px;
-    margin-top: 100px;
+    height: 550px;
+    margin-top: 150px;
 }
 
 .experience-box {
@@ -259,10 +259,10 @@ html, body {
 }
 
 #third-div {
-    height: 900px;
+    height: 950px;
     width: 100%;
     background-color: #212121;
-    padding-top: 100px;
+    padding-top: 150px;
 }
 
 #back-to-top {
@@ -293,7 +293,7 @@ html, body {
     .typeText .content {
         display: inline;
         color: white;
-        font-family: miso-bold, sans-serif;
+        font-family: miso, sans-serif;
     }
 
 .intro-description {
@@ -479,9 +479,9 @@ html, body {
 
 #contact-form {
     margin: 0 auto;
-    margin-top: 70px;
+    margin-top: 120px;
     width: 55%;
-    height: 600px;
+    height: 550px;
 }
 
 #copyright {
@@ -601,7 +601,7 @@ html, body {
 
 @media (min-width: 457px) and (max-width: 576px) {
     #info-div {
-        height: 2600px;
+        height: 2800px;
     }
 
     #experience-diagram {
@@ -630,7 +630,7 @@ html, body {
 
 @media (min-width:576px) and (max-width: 767px) {
     #info-div {
-        height: 1300px;
+        height: 1400px;
     }
 
     #experience-diagram {
@@ -660,9 +660,6 @@ html, body {
 
 
 @media (min-width:768px) and (max-width: 900px) {
-    #info-div {
-        height: 930px;
-    }
 
     #experience-diagram {
         height: 630px;
@@ -682,13 +679,13 @@ html, body {
 
 @media (min-width:473px) and (max-width: 675px) {
     #about-me-div {
-        height: 1300px;
+        height: 1400px;
     }
 }
 
 @media (min-width:675px) and (max-width: 992px) {
     #about-me-div {
-        height: 1100px;
+        height: 1200px;
     }
 }
 
