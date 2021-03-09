@@ -49,15 +49,51 @@ html, body {
 }
 
 #navbar {
-    top: 1;
+    padding-top: 10px;
+    padding-bottom: 10px;
     z-index: 1;
+    box-shadow: none;
+    transition: padding-top 0.3s ease-in-out, padding-bottom 0.3s ease-in-out;
 }
+
+    #navbar.navbar-collapse {
+        padding-top: 4px;
+        padding-bottom: 4px;
+        transition: padding-top 0.3s ease-in-out, padding-bottom 0.3s ease-in-out;
+    }
+
+
+
+
+.navbar-collapse {
+    background-color: #212121;
+}
+
+
+.nav-item {
+    display: inline-block;
+    font-family: miso, sans-serif;
+    color: white;
+    font-size: 1.75em;
+    transition: font-size 0.3s ease-in-out;
+    letter-spacing: 0.0125em;
+}
+
+
+#nav-items {
+    margin: 0 auto;
+}
+
+
+
 
 /* The header for the nav bar */
 #title-irminrics {
-    font-family: miso-bold, sans-serif;
-    font-size: 30px;
     color: white;
+    font-size: 1.75em;
+    font-family: miso,sans-serif;
+    letter-spacing: 0.0125em;
+    padding: 8px 0 8px 0;
 }
 
 .icon {
@@ -194,7 +230,7 @@ html, body {
     margin: 0 auto;
 }
 
-#info-div {
+#experience-div {
     width: 100%;
     height: 1050px;
     background-color: #DFDFDF;
@@ -258,7 +294,7 @@ html, body {
     transform: translateX(-50%) translateY(-50%);
 }
 
-#third-div {
+#contact-div {
     height: 950px;
     width: 100%;
     background-color: #212121;
@@ -322,19 +358,19 @@ html, body {
 
 
 
-.ml1 {
+.experience {
     font-family: miso, sans-serif;
     font-size: 3.5em;
     margin: 0 auto;
     text-align: center;
 }
 
-    .ml1 .letter {
+    .experience .letter {
         display: inline-block;
         line-height: 1em;
     }
 
-    .ml1 .text-wrapper {
+    .experience .text-wrapper {
         position: relative;
         display: inline-block;
         padding-top: 0.1em;
@@ -342,7 +378,7 @@ html, body {
         padding-bottom: 0.15em;
     }
 
-    .ml1 .line {
+    .experience .line {
         opacity: 0;
         position: absolute;
         left: 0;
@@ -351,16 +387,16 @@ html, body {
         background-color: #212121;
     }
 
-    .ml1 .line1 {
+    .experience .line1 {
         top: 0;
     }
 
-    .ml1 .line2 {
+    .experience .line2 {
         bottom: 0;
     }
 
 
-.ml2 {
+.contact {
     font-family: miso, sans-serif;
     font-size: 3.5em;
     margin: 0 auto;
@@ -368,12 +404,12 @@ html, body {
     color: white;
 }
 
-    .ml2 .letter {
+    .contact .letter {
         display: inline-block;
         line-height: 1em;
     }
 
-    .ml2 .text-wrapper {
+    .contact .text-wrapper {
         position: relative;
         display: inline-block;
         padding-top: 0.1em;
@@ -381,7 +417,7 @@ html, body {
         padding-bottom: 0.15em;
     }
 
-    .ml2 .line {
+    .contact .line {
         opacity: 0;
         position: absolute;
         left: 0;
@@ -390,15 +426,15 @@ html, body {
         background-color: white;
     }
 
-    .ml2 .line1 {
+    .contact .line1 {
         top: 0;
     }
 
-    .ml2 .line2 {
+    .contact .line2 {
         bottom: 0;
     }
 
-.ml3 {
+.about {
     font-family: miso, sans-serif;
     font-size: 3.5em;
     margin: 0 auto;
@@ -406,12 +442,12 @@ html, body {
     color: white;
 }
 
-    .ml3 .letter {
+    .about .letter {
         display: inline-block;
         line-height: 1em;
     }
 
-    .ml3 .text-wrapper {
+    .about .text-wrapper {
         position: relative;
         display: inline-block;
         padding-top: 0.1em;
@@ -419,7 +455,7 @@ html, body {
         padding-bottom: 0.15em;
     }
 
-    .ml3 .line {
+    .about .line {
         opacity: 0;
         position: absolute;
         left: 0;
@@ -428,27 +464,27 @@ html, body {
         background-color: white;
     }
 
-    .ml3 .line1 {
+    .about .line1 {
         top: 0;
     }
 
-    .ml3 .line2 {
+    .about .line2 {
         bottom: 0;
     }
 
-.ml4 {
+.awards {
     font-family: miso, sans-serif;
     font-size: 3.5em;
     margin: 0 auto;
     text-align: center;
 }
 
-    .ml4 .letter {
+    .awards .letter {
         display: inline-block;
         line-height: 1em;
     }
 
-    .ml4 .text-wrapper {
+    .awards .text-wrapper {
         position: relative;
         display: inline-block;
         padding-top: 0.1em;
@@ -456,7 +492,7 @@ html, body {
         padding-bottom: 0.15em;
     }
 
-    .ml4 .line {
+    .awards .line {
         opacity: 0;
         position: absolute;
         left: 0;
@@ -465,11 +501,11 @@ html, body {
         background-color: #212121;
     }
 
-    .ml4 .line1 {
+    .awards .line1 {
         top: 0;
     }
 
-    .ml4 .line2 {
+    .awards .line2 {
         bottom: 0;
     }
 
@@ -566,7 +602,7 @@ html, body {
 
 @media only screen and (max-width: 457px) {
 
-    #info-div {
+    #experience-div {
         height: 2600px;
     }
 
@@ -596,7 +632,7 @@ html, body {
 
 
 @media (min-width: 457px) and (max-width: 576px) {
-    #info-div {
+    #experience-div {
         height: 2800px;
     }
 
@@ -621,10 +657,14 @@ html, body {
     #oops-description {
         font-size: 20px;
     }
+
+    #nav-container-right {
+        display: none;
+    }
 }
 
 @media (min-width:576px) and (max-width: 767px) {
-    #info-div {
+    #experience-div {
         height: 1400px;
     }
 

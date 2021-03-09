@@ -5,6 +5,22 @@ $(document).ready(function () {
     document.querySelectorAll("#about-me-picture-box").forEach(el => el.style.opacity = "0");
     document.querySelectorAll("#about-me-description").forEach(el => el.style.opacity = "0");
 
+    // Collapse Navbar
+    var navbarCollapse = function () {
+        if ($("#navbar").offset().top > 200) {
+            $("#navbar").addClass("navbar-collapse");
+        } else {
+            $("#navbar").removeClass("navbar-collapse");
+        }
+    };
+
+    // Collapse now if page is not at top
+    navbarCollapse();
+    // Collapse the navbar when page is scrolled
+    $(window).scroll(navbarCollapse);
+
+
+
     if ($(window).scrollTop() === 0) {
 
         document.getElementById("btt-button").style.visibility = "hidden";
@@ -30,24 +46,24 @@ $(document).ready(function () {
 
 
     // Wrap every letter in a span
-    var textWrapper = document.querySelector('.ml1 .letters');
+    var textWrapper = document.querySelector('.experience .letters');
     textWrapper.innerHTML = textWrapper.textContent.replace(/\S/g, "<span class='letter'>$&</span>");
 
     // Wrap every letter in a span
-    var textWrapper = document.querySelector('.ml2 .letters');
+    var textWrapper = document.querySelector('.contact .letters');
     textWrapper.innerHTML = textWrapper.textContent.replace(/\S/g, "<span class='letter'>$&</span>");
 
     // Wrap every letter in a span
-    var textWrapper = document.querySelector('.ml3 .letters');
+    var textWrapper = document.querySelector('.about .letters');
     textWrapper.innerHTML = textWrapper.textContent.replace(/\S/g, "<span class='letter'>$&</span>");
 
     // Wrap every letter in a span
-    var textWrapper = document.querySelector('.ml4 .letters');
+    var textWrapper = document.querySelector('.awards .letters');
     textWrapper.innerHTML = textWrapper.textContent.replace(/\S/g, "<span class='letter'>$&</span>");
 
     var contactHeader = anime.timeline({ loop: false, autoplay: false })
         .add({
-            targets: '.ml2 .letter',
+            targets: '.contact .letter',
             scale: [0.3, 1],
             opacity: [0, 1],
             translateZ: 0,
@@ -55,7 +71,7 @@ $(document).ready(function () {
             duration: 600,
             delay: (el, i) => 70 * (i + 1),
         }).add({
-            targets: '.ml2 .line',
+            targets: '.contact .line',
             scaleX: [0, 1],
             opacity: [0.5, 1],
             easing: "easeOutExpo",
@@ -66,7 +82,7 @@ $(document).ready(function () {
 
     var experienceHeader = anime.timeline({ loop: false, autoplay: false })
         .add({
-            targets: '.ml1 .letter',
+            targets: '.experience .letter',
             scale: [0.3, 1],
             opacity: [0, 1],
             translateZ: 0,
@@ -74,7 +90,7 @@ $(document).ready(function () {
             duration: 600,
             delay: (el, i) => 70 * (i + 1),
         }).add({
-            targets: '.ml1 .line',
+            targets: '.experience .line',
             scaleX: [0, 1],
             opacity: [0.5, 1],
             easing: "easeOutExpo",
@@ -85,7 +101,7 @@ $(document).ready(function () {
 
     var aboutmeHeader = anime.timeline({ loop: false, autoplay: false })
         .add({
-            targets: '.ml3 .letter',
+            targets: '.about .letter',
             scale: [0.3, 1],
             opacity: [0, 1],
             translateZ: 0,
@@ -93,7 +109,7 @@ $(document).ready(function () {
             duration: 600,
             delay: (el, i) => 70 * (i + 1),
         }).add({
-            targets: '.ml3 .line',
+            targets: '.about .line',
             scaleX: [0, 1],
             opacity: [0.5, 1],
             easing: "easeOutExpo",
@@ -104,7 +120,7 @@ $(document).ready(function () {
 
     var awardsHeader = anime.timeline({ loop: false, autoplay: false })
         .add({
-            targets: '.ml4 .letter',
+            targets: '.awards .letter',
             scale: [0.3, 1],
             opacity: [0, 1],
             translateZ: 0,
@@ -112,7 +128,7 @@ $(document).ready(function () {
             duration: 600,
             delay: (el, i) => 70 * (i + 1),
         }).add({
-            targets: '.ml4 .line',
+            targets: '.awards .line',
             scaleX: [0, 1],
             opacity: [0.5, 1],
             easing: "easeOutExpo",
@@ -148,7 +164,7 @@ $(document).ready(function () {
 
 
     var experienceHeaderWP = new Waypoint({
-        element: document.getElementById('info-div'),
+        element: document.getElementById('experience-div'),
         handler: function () {
             experienceHeader.play();
             experienceHeaderWP.destroy();
@@ -167,7 +183,7 @@ $(document).ready(function () {
     });
 
     var contactHeaderWP = new Waypoint({
-        element: document.getElementById('third-div'),
+        element: document.getElementById('contact-div'),
         handler: function () {
             contactHeader.play();
             contactHeaderWP.destroy();
@@ -230,15 +246,30 @@ function scrollAnimation() {
 
 
 function scrollToTop() {
-    $('html,body').animate({ scrollTop: 0 }, 200);
-    return false; 
-}
-
-function scrollToBottom() {
-    $('html,body').animate({ scrollTop: $('#copyright').offset().top }, 200);
+    $('html,body').animate({ scrollTop: 0 }, 500);
     return false;
 }
-    
+
+function scrollToAbout() {
+    $('html,body').animate({ scrollTop: $('#about-me-div').offset().top }, 200);
+    return false;
+}
+
+function scrollToAwards() {
+    $('html,body').animate({ scrollTop: $('#awards-div').offset().top }, 200);
+    return false;
+}
+
+function scrollToExperience() {
+    $('html,body').animate({ scrollTop: $('#experience-div').offset().top }, 200);
+    return false;
+}
+
+function scrollToContact() {
+    $('html,body').animate({ scrollTop: $('#contact-div').offset().top }, 200);
+    return false;
+}
+
 
 
 
