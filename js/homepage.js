@@ -228,7 +228,127 @@ $(document).ready(function () {
     });
 
 
+    var IntroWP = new Waypoint({
+        element: document.getElementById('about-me-div'),
+        offset: '80%',
+        handler: function (direction) {
+            if (direction === 'up') {
+                document.getElementById('nav-about').classList.remove('active');
+                document.getElementById('nav-awards').classList.remove('active');
+                document.getElementById('nav-experience').classList.remove('active');
+                document.getElementById('nav-contact').classList.remove('active');
+            }
+        }
+    })
 
+    var AboutUpWP = new Waypoint({
+        element: document.getElementById('about-me-div'),
+        offset: 0,
+        handler: function (direction) {
+            if (direction === 'down') {
+                document.getElementById('nav-about').classList.add('active');
+                document.getElementById('nav-awards').classList.remove('active');
+                document.getElementById('nav-experience').classList.remove('active');
+                document.getElementById('nav-contact').classList.remove('active');
+
+            }
+        }
+    })
+
+    var AboutDownWP = new Waypoint({
+        element: document.getElementById('about-me-div'),
+        offset: 'bottom-in-view',
+        handler: function (direction) {
+            if (direction === 'up') {
+                document.getElementById('nav-about').classList.add('active');
+                document.getElementById('nav-awards').classList.remove('active');
+                document.getElementById('nav-experience').classList.remove('active');
+                document.getElementById('nav-contact').classList.remove('active');
+            }
+        }
+    })
+
+    var AwardsUpWP = new Waypoint({
+        element: document.getElementById('awards-div'),
+        offset: 0,
+        handler: function (direction) {
+            if (direction === 'down') {
+                document.getElementById('nav-about').classList.remove('active');
+                document.getElementById('nav-awards').classList.add('active');
+                document.getElementById('nav-experience').classList.remove('active');
+                document.getElementById('nav-contact').classList.remove('active');
+
+            }
+        }
+    })
+
+    var AwardsDownWP = new Waypoint({
+        element: document.getElementById('awards-div'),
+        offset: 'bottom-in-view',
+        handler: function (direction) {
+            if (direction === 'up') {
+                document.getElementById('nav-about').classList.remove('active');
+                document.getElementById('nav-awards').classList.add('active');
+                document.getElementById('nav-experience').classList.remove('active');
+                document.getElementById('nav-contact').classList.remove('active');
+            }
+        }
+    })
+
+    var ExperienceUpWP = new Waypoint({
+        element: document.getElementById('experience-div'),
+        offset: 0,
+        handler: function (direction) {
+            if (direction === 'down') {
+                document.getElementById('nav-about').classList.remove('active');
+                document.getElementById('nav-awards').classList.remove('active');
+                document.getElementById('nav-experience').classList.add('active');
+                document.getElementById('nav-contact').classList.remove('active');
+
+            }
+        }
+    })
+
+    var ExperienceDownWP = new Waypoint({
+        element: document.getElementById('experience-div'),
+        offset: 'bottom-in-view',
+        handler: function (direction) {
+            if (direction === 'up') {
+                document.getElementById('nav-about').classList.remove('active');
+                document.getElementById('nav-awards').classList.remove('active');
+                document.getElementById('nav-experience').classList.add('active');
+                document.getElementById('nav-contact').classList.remove('active');
+            }
+        }
+    })
+
+
+    var ContactUpWP = new Waypoint({
+        element: document.getElementById('contact-div'),
+        offset: 0,
+        handler: function (direction) {
+            if (direction === 'down') {
+                document.getElementById('nav-about').classList.remove('active');
+                document.getElementById('nav-awards').classList.remove('active');
+                document.getElementById('nav-experience').classList.remove('active');
+                document.getElementById('nav-contact').classList.add('active');
+
+            }
+        }
+    })
+
+    var ContactDownWP = new Waypoint({
+        element: document.getElementById('contact-div'),
+        offset: 'bottom-in-view',
+        handler: function (direction) {
+            if (direction === 'up') {
+                document.getElementById('nav-about').classList.remove('active');
+                document.getElementById('nav-awards').classList.remove('active');
+                document.getElementById('nav-experience').classList.remove('active');
+                document.getElementById('nav-contact').classList.add('active');
+            }
+        }
+    })
 
 
 });
@@ -246,27 +366,27 @@ function scrollAnimation() {
 
 
 function scrollToTop() {
-    $('html,body').animate({ scrollTop: 0 }, 500);
+    $('html,body').animate({ scrollTop: 0 },  0);
     return false;
 }
 
 function scrollToAbout() {
-    $('html,body').animate({ scrollTop: $('#about-me-div').offset().top }, 200);
+    $('html').animate({ scrollTop: $('#about-me-div').offset().top + 50  }, 0);
     return false;
 }
 
 function scrollToAwards() {
-    $('html,body').animate({ scrollTop: $('#awards-div').offset().top }, 200);
+    $('html,body').animate({ scrollTop: $('#awards-div').offset().top + 50  }, 0);
     return false;
 }
 
 function scrollToExperience() {
-    $('html,body').animate({ scrollTop: $('#experience-div').offset().top }, 200);
+    $('html,body').animate({ scrollTop: $('#experience-div').offset().top + 50  }, 0);
     return false;
 }
 
 function scrollToContact() {
-    $('html,body').animate({ scrollTop: $('#contact-div').offset().top }, 200);
+    $('html,body').animate({ scrollTop: $('#contact-div').offset().top + 50 }, 0);
     return false;
 }
 
@@ -282,6 +402,7 @@ $(document).scroll(function () {
         document.getElementById("btt-button").style.visibility = "visible";
     }
 });
+
 
 
 // When the user scrolls the page, execute functions

@@ -77,11 +77,13 @@ html, body {
     font-size: 1.75em;
     transition: font-size 0.3s ease-in-out;
     letter-spacing: 0.0125em;
+    padding: 0 10px 0 10px;
 }
 
 
 #nav-items {
     margin: 0 auto;
+    color: white;
 }
 
 
@@ -309,8 +311,7 @@ html, body {
 }
 
 #btt-button {
-    background-color: rgba(245, 245, 245, 0.4);
-    font-weight: 700;
+    color: #404040;
 }
 
 
@@ -340,19 +341,46 @@ html, body {
 }
 
 
-@keyframes blink {
-    0% {
-        opacity: 1;
-    }
-
-    99% {
-        opacity: 0;
-    }
-
-    100% {
-        opacity: 1;
-    }
+ul {
+    display: table;
 }
+
+li {
+    display: table-cell;
+    position: relative;
+}
+
+a {
+    color: white;
+    text-decoration: none;
+}
+
+    a:hover {
+        color: white;
+        text-decoration: none;
+        cursor: pointer;
+    }
+
+    a:after {
+        content: "";
+        display: block;
+        height: 2px;
+        left: 50%;
+        position: absolute;
+        background: white;
+        transition: width 0.3s ease 0s, left 0.3s ease 0s;
+        width: 0;
+    }
+
+    a:hover:after {
+        width: 100%;
+        left: 0px;
+    }
+
+    a.active:after {
+        width: 100%;
+        left: 0px;
+    }
 
 
 
@@ -649,14 +677,7 @@ html, body {
     }
 }
 
-@media only screen and (max-width: 660px) {
-    #oops-title {
-        font-size: 140px;
-    }
-
-    #oops-description {
-        font-size: 20px;
-    }
+@media only screen and (max-width: 695px) {
 
     #nav-container-right {
         display: none;
