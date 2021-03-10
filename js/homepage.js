@@ -366,27 +366,27 @@ function scrollAnimation() {
 
 
 function scrollToTop() {
-    $('html,body').animate({ scrollTop: 0 },  0);
+    $('html,body').animate({ scrollTop: 0 }, 500);
     return false;
 }
 
 function scrollToAbout() {
-    $('html').animate({ scrollTop: $('#about-me-div').offset().top + 50  }, 0);
+    $('html').animate({ scrollTop: $('#about-me-div').offset().top + 50 }, 500);
     return false;
 }
 
 function scrollToAwards() {
-    $('html,body').animate({ scrollTop: $('#awards-div').offset().top + 50  }, 0);
+    $('html,body').animate({ scrollTop: $('#awards-div').offset().top + 50 }, 500);
     return false;
 }
 
 function scrollToExperience() {
-    $('html,body').animate({ scrollTop: $('#experience-div').offset().top + 50  }, 0);
+    $('html,body').animate({ scrollTop: $('#experience-div').offset().top + 50 }, 500);
     return false;
 }
 
 function scrollToContact() {
-    $('html,body').animate({ scrollTop: $('#contact-div').offset().top + 50 }, 0);
+    $('html,body').animate({ scrollTop: $('#contact-div').offset().top + 50 }, 500);
     return false;
 }
 
