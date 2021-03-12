@@ -190,9 +190,18 @@ html, body {
 #about-me-description {
     margin: 0 auto;
     color: white;
-    padding-top: 125px;
     width: 70%;
+    font-size: 16px;
 }
+
+#about-me-description-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
 
 #awards-div {
     padding-top: 150px;
@@ -590,11 +599,23 @@ a {
     color: white;
 }
 
+.md-form input[type=email] {
+    color: white;
+}
+
+.md-form input[type=tel] {
+    color: white;
+}
+
 .md-form textarea {
     border-top: 0;
     border-left: 0;
     border-right: 0;
     color: white;
+}
+
+textarea {
+    color:white;
 }
 
 
@@ -734,6 +755,16 @@ a {
 
 
 
+@media only screen and (max-width: 585px) {
+    #about-me-div {
+        height: 1600px;
+    }
+
+    #about-me-picture {
+        width: 373px;
+        height: 353px;
+    }
+}
 
 
 @media (min-width:768px) and (max-width: 900px) {
@@ -743,34 +774,20 @@ a {
     }
 }
 
-@media only screen and (max-width: 473px) {
-    #about-me-div {
-        height: 1400px;
-    }
 
-    #about-me-picture {
-        width: 373px;
-        height: 353px;
-    }
-}
-
-@media (min-width:473px) and (max-width: 675px) {
+@media (min-width:585px) and (max-width: 847px) {
     #about-me-div {
         height: 1400px;
     }
 }
 
-@media (min-width:675px) and (max-width: 992px) {
+@media (min-width:847px) and (max-width: 992px) {
     #about-me-div {
         height: 1200px;
     }
 }
 
-@media only screen and (max-width: 992px) {
-    #about-me-description {
-        padding: 0px;
-    }
-}
+
 
 @media (min-width: 473px) and (max-width: 1069px) {
     #about-me-picture {
@@ -785,6 +802,10 @@ a {
         height: 552px;
     }
 }
+
+
+
+
 
 
 @media only screen and (max-width: 1484px) {
