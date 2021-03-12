@@ -352,12 +352,20 @@ $(document).ready(function () {
 
 
     setInputFilter(document.getElementById("contactPhone"), function (value) {
-        return /^\d*\.?\d*$/.test(value); 
+        return /^\d*\.?\d*$/.test(value);
     });
 
     setInputFilter(document.getElementById("contactName"), function (value) {
-        return /^[A-Za-z]+$/.test(value); 
+        return /^[A-Za-z]+$/.test(value);
     });
+
+    setInputFilter(document.getElementById("contactEmail"), function (value) {
+        const emailRegex = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+        return emailRegex.test(value);
+    });
+
+    s
+
 
 
 });

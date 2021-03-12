@@ -599,9 +599,6 @@ a {
     color: white;
 }
 
-.md-form input[type=email] {
-    color: white;
-}
 
 
 
@@ -613,22 +610,22 @@ a {
 }
 
 textarea {
-    color:white;
+    color: white;
 }
 
 
-    .md-form textarea + label {
-        color: #808080 !important;
-    }
+.md-form textarea + label {
+    color: #808080 !important;
+}
 
-    .md-form textarea:focus + label {
-        color: white !important;
-    }
+.md-form textarea:focus + label {
+    color: white !important;
+}
 
-    .md-form textarea:focus {
-        box-shadow: 0 1px 0 0 white !important;
-        border-bottom: 1px solid white !important;
-    }
+.md-form textarea:focus {
+    box-shadow: 0 1px 0 0 white !important;
+    border-bottom: 1px solid white !important;
+}
 
 .md-form textarea {
     box-shadow: 0 1px 0 0 #808080 !important;
@@ -664,7 +661,6 @@ textarea {
     #experience-diagram {
         height: 2400px;
     }
-
 }
 
 
@@ -678,7 +674,6 @@ textarea {
     #experience-diagram {
         height: 2400px;
     }
-
 }
 
 @media only screen and (max-width: 695px) {
