@@ -879,7 +879,7 @@ textarea {
 /*awards media*/
 
 @media only screen and (max-width: 991.5px) {
-    .awards-row{
+    .awards-row {
         height: 800px;
     }
 
