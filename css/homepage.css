@@ -104,7 +104,7 @@ html, body {
     height: 44px;
     margin-right: 8px;
     display: inline-block;
-    background-size: contain;
+    background-size: cover;
 }
 
 .icon-facebook {
@@ -203,11 +203,7 @@ html, body {
 
 
 
-#awards-div {
-    padding-top: 150px;
-    height: 1000px;
-    background-color: #DFDFDF;
-}
+
 
 
 #second-background {
@@ -514,6 +510,7 @@ a {
     font-size: 3.5em;
     margin: 0 auto;
     text-align: center;
+    color: white;
 }
 
     .awards .letter {
@@ -535,7 +532,7 @@ a {
         left: 0;
         height: 3px;
         width: 100%;
-        background-color: #212121;
+        background-color: white;
     }
 
     .awards .line1 {
@@ -545,6 +542,77 @@ a {
     .awards .line2 {
         bottom: 0;
     }
+
+
+#awards-box {
+    margin-top: 150px;
+    height: 700px;
+    width: 100%;
+}
+
+.awards-row {
+    height: 50%;
+    margin: 0 auto;
+    text-align: center;
+    margin-top: 50px;
+}
+
+#awards-div {
+    padding-top: 100px;
+    height: 1100px;
+    background-color: #212121;
+}
+
+.award-box {
+    border-radius: 25px;
+    border: 2px solid white;
+    margin: 0 auto;
+    height: 320px;
+    width: 400px;
+}
+
+
+.gold-medal {
+    margin: 30px 10px 10px 10px;
+    height: 100px;
+    width: 90px;
+    background-image: url(../images/gold-medal.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.scroll {
+    margin: 30px 10px 10px 10px;
+    height: 100px;
+    width: 90px;
+    background-image: url(../images/scroll.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.certificate {
+    margin: 30px 10px 10px 10px;
+    height: 100px;
+    width: 90px;
+    background-image: url(../images/certificate.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.award-content {
+    font-size: 15px;
+    margin: 0 auto;
+    color: white;
+}
+
+.award-title {
+    font-weight: bold;
+}
+
+.award-description {
+    margin: 10px;
+}
+
 
 
 #contact-form {
@@ -804,5 +872,18 @@ textarea {
 @media only screen and (max-width: 1484px) {
     .content {
         line-height: 90px;
+    }
+}
+
+
+/*awards media*/
+
+@media only screen and (max-width: 991.5px) {
+    .awards-row{
+        height: 800px;
+    }
+
+    #awards-div {
+        height: 2200px;
     }
 }

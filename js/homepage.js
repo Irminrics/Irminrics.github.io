@@ -2,6 +2,7 @@
 $(document).ready(function () {
 
     document.querySelectorAll(".experience-box").forEach(el => el.style.opacity = "0");
+    document.querySelectorAll(".award-box").forEach(el => el.style.opacity = "0");
     document.querySelectorAll("#about-me-picture-box").forEach(el => el.style.opacity = "0");
     document.querySelectorAll("#about-me-description").forEach(el => el.style.opacity = "0");
 
@@ -162,6 +163,15 @@ $(document).ready(function () {
         autoplay: false,
     });
 
+    var awardContent = anime({
+        targets: '.award-box',
+        easing: "easeOutExpo",
+        opacity: 1,
+        duration: 5000,
+        autoplay: false,
+        delay: anime.stagger(450) // increase delay by 450ms for each elements.
+    });
+
 
     var experienceHeaderWP = new Waypoint({
         element: document.getElementById('experience-div'),
@@ -178,6 +188,15 @@ $(document).ready(function () {
         handler: function () {
             experienceContent.play();
             experienceContentWP.destroy();
+        },
+        offset: 500
+    });
+
+    var awardContentWP = new Waypoint({
+        element: document.getElementById('awards-box'),
+        handler: function () {
+            awardContent.play();
+            awardContentWP.destroy();
         },
         offset: 500
     });
@@ -208,6 +227,8 @@ $(document).ready(function () {
         },
         offset: 500
     });
+
+
 
     var aboutMePictureWP = new Waypoint({
         element: document.getElementById('about-me-picture-box'),
@@ -364,7 +385,7 @@ $(document).ready(function () {
         return emailRegex.test(value);
     });
 
-    s
+    
 
 
 
