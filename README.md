@@ -6,4 +6,4 @@
 
 A simple website about me, myself and I. 
 
-Future plans to convert this using React Framework is in progress.
+Future plans to convert this using React is in progress.
