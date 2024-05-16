@@ -10,4 +10,4 @@ Note: This is an old site and will be archived soon. Please visit the latest sit
 
 18/12: Future plans to convert this using React is in progress.
 
-29/12: Revamped personal site made with React can be found [here](https://github.com/Irminrics/react-irminrics)
+29/12: Revamped personal site made with React can be found [here](https://github.com/angjunkang/react-angjunkang)
